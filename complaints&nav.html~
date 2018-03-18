@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>eCS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="resource/bootstrap.min.css">
+  <script src="resource/jquery.min.js"></script>
+  <script src="resource/bootstrap.min.js"></script>
+  <script src="resource/simple-sidebar.js"></script>
+  <link href="resource/simple-sidebar1.css" rel="stylesheet">
+  <script type="text/javascript" src="resource/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="resource/jquery.leanModal.min.js"></script>
+<!--<link rel="stylesheet" href="resource/font-awesome.min.css" />-->
+
+
+<link type="text/css" rel="stylesheet" href="resource/login_style.css" />
+  <style>
+    input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+    .row.content {height: 1500px}
+   
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+ 
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-default no-margin" style="background-color:rgb(0, 132, 191);height:65px">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header fixed-brand">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="menu-toggle">
+        <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+      </button>
+       <a class="navbar-brand" href="hub.rgukt.ac.in" style="color:white;font-size:22px;">e-Complaint System</a>
+    </div>
+    <!-- navbar-header-->
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+     
+         <li class="active"  ><button class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"> <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></button></li>
+      </ul>
+      </ul>
+       <ul class="nav navbar-nav navbar-right">
+        <li><a id="modal_trigger" href="#modal" style="color:white;font-size:20px"> Login<span class="caret"></span></a></li>
+      </ul>
+    </div>
+    <!-- bs-example-navbar-collapse-1 -->
+  </nav>
+    
+    <!--pop up container-->
+ 	<div id="modal" class="popupContainer" style="display:none;">
+		<header class="popupHeader">
+			<span class="header_title" >Login</span>
+			<span class="modal_close"><i class="fa fa-times"></i></span>
+		</header>
+		
+		<section class="popupBody">
+			<div class="social_login">
+
+				<div class="centeredText">
+					<span><strong>If you are a new user press on sign up to register</strong></span>
+				</div>
+
+				<div class="action_btns" >
+					<div class="one_half"><a href="#" id="login_form" class="btn btn_lblue">Login</a></div>
+					<div class="one_half " style="padding-left:10px;"><a href="#" id="register_form" class="btn btn_lblue">Sign up</a></div>
+		
+				</div>
+			</div>
+
+			<!-- Username & Password Login form -->
+			<div class="user_login">
+				<form>
+					<label>Id / Username</label>
+					<input type="text" />
+					<br />
+					<label>Password</label>
+					<input type="password" />
+					<br />
+					<div class="action_btns">
+						<div class="one_half"><a href="#" class="btn back_btn btn_lblue"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						<div class="one_half last"><a href="#" class="btn btn_lblue">Login</a></div>
+					</div>
+				</form>
+				<br>
+			<div class="one_half"><a href="#" id="forgot_form" class="btn btn_lblue1">Forgot password?</a></div>
+			<br><br><br>
+			</div>
+
+			<!-- Register Form -->
+			<div class="user_register">
+				<form>
+					<label name="name">Id</label>
+					<input type="text" id="idtext"/>
+					<label name="name" for="sel1">Branch:</label>
+					      <select class="form-control" id="sel1" style="width:30%">
+						<option>CSE</option>
+						<option>ECE</option>
+						<option>CIVIL</option>
+						<option>MECH</option>
+						<option>MME</option>
+						<option>CHEM</option>
+						<option>EEE</option>
+						<option>P1</option>
+						<option>P2</option>
+					      </select>
+					<label name="name">Full Name</label>
+					<input type="text" />
+					<br />
+					<label name="email">Email Address</label>
+					<input type="email" />
+					<br />
+					<label name="pswd">Password</label>
+					<input type="password" />
+					<br />
+					<div class="action_btns">
+						<div class="one_half"><a href="#" class="btn back_btn btn_lblue"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						<div class="one_half last"><a href="#" class="btn btn_lblue">Register</a></div>
+					</div>
+				</form>
+			</div>
+				<!-- forgot for-->
+			<div class="forgot_for">
+				<form>
+					<label>Email Address</label>
+					<input type="email" />
+					<br /><br />
+					<div class="action_btns">
+						<div class="one_half"><a href="#" class="btn back_btn btn_lblue"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						
+						<div class="one_half last"><a href="#" class="btn btn_lblue">Send Password</a></div>
+					</div>
+				</form>
+			</div>
+		</section>
+	</div>
+</div>
+<!--end of popup container-->
+
+
+</nav>
+ <div id="wrapper" class="wrap">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+
+        <li>
+          <a href="#">             
+           Infomration
+            <span class="fa-stack fa-lg pull-left">
+              <i class="fa fa-angle-double-left fa-stack-1x" ></i>
+            </span>            
+          
+          </a>
+  
+        <li class="group-resume">
+          <span>Welcome</span>
+          <p>Nafi</p>
+        </li>
+        <li class="group-resume">
+          <span>Here</span>
+          <p>You can find</p>
+        </li>
+
+        <li>
+          <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Complaint Section</a>
+          <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+            <li><a href="#"><i class="fa fa-facebook"></i>My complaints</a></li>
+            <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Make a complaint</a></li>
+
+          </ul>
+        </li>
+         <li>
+          <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Profile</a>
+          <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+            <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Rating</a></li>
+            <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Show</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-cloud-download fa-stack-1x "></i></span>Feedback</a>
+        </li>
+        <li>
+          <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-youtube-play fa-stack-1x "></i></span>About</a>
+        </li>
+        <li>
+        <!--  font-family: "Comic Sans MS", cursive, sans-serif;-->
+          <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-server fa-stack-1x "></i></span>Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+   <div class="col-sm-9" id="hi" style="padding-left:60px">
+   <!--   <h4>RECENT POSTS</h4>-->
+   
+
+      <h1 style="text-align:center;color:brown">Write your complaint here</h1>
+     <form role="form">
+  <div class="form-group" >
+      		 <h4 style="font-size:18px;">Choose one: </h4>
+  		  <select id="place" name="chse" style="width:30%;">
+   		   <option value="Samith Pradhan">Samith Pradhan</option>
+    		  <option value="Ranjith">Ranjith</option>
+    		  <option value="Anjaneyulu Sir">Anjaneyulu Sir</option>
+   		 </select>
+        
+          <h4 style="font-size:18px;">Subject :</h4>
+          <input type="text" class="form-control"  style="width:100%;height:50px;color:#008B8B;" required>
+    
+          <h4 style="font-size:18px;">Complaint : </h4>
+          <textarea class="form-control"  style="width:100%;height:100px;color:#008B8B;" required></textarea>
+          <br>
+      	<input type="submit" value="submit" class="btn btn-primary btn-lg col-sm-2"" style="background-color:rgb(0, 162, 162);color:white;border-radius:10px">
+     	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" class="btn btn-primary btn-lg col-sm-2" style="background-color:rgb(0, 162, 162);color:white;border-radius:10px" value="Reset">
+     	 <!--------------------------------------------------------------------->
+    
+      
+   <!--   <p><span class="badge">2</span> Comments:</p><br>-->
+      
+   
+    </div>
+  </div>
+</div>
+    <!-- /#page-content-wrapper -->
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content 
+    <div id="page-content-wrapper">
+      <div class="container-fluid xyz">
+        <div class="row">
+          <div class="col-lg-12">
+           
+  <h1 style="text-align:center;color:brown">Write your complaint here</h1>
+  <br>
+     <form role="form">
+  <div class="form-group" >
+      		 <h4 style="margin:0px 100px;font-size:20px;">Choose one: </h4>
+  		  <select id="place" name="chse" style="width:250px;margin:-18px 220px;">
+   		   <option value="Samith Pradhan">Samith Pradhan</option>
+    		  <option value="Ranjith">Ranjith</option>
+    		  <option value="Anjaneyulu Sir">Anjaneyulu Sir</option>
+   		 </select>
+
+          <br>
+          <br>
+          <h4 style="margin:0px 100px;font-size:20px;">Subject :</h4>
+          <textarea class="form-control"  style="width:800px;height:60px;color:brown;margin:-17px 220px;" required></textarea>
+          <br>
+          <h4 style="margin:0px 100px;font-size:20px;">Complaint : </h4>
+          <textarea class="form-control"  style="width:800px;height:100px;color:brown;margin:-17px 220px;" required></textarea>
+          <br>
+          <h4 style="margin:0px 100px;font-size:20px;">Details :</h4>
+          <textarea class="form-control"  style="width:800px;height:60px;color:brown;margin:-17px 220px;" required></textarea>
+          <br>
+     	 <a href="#" class="btn btn-primary btn-lg" style="margin:15px 220px;background-color:rgb(0, 162, 162);color:white">Submit</a>
+     	 <input type="reset" class="btn btn-primary btn-lg" style="margin-left:-170px;background-color:rgb(0, 162, 162);color:white" value="Reset  ">
+       
+      </form>
+      <br><br>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <!-- /#page-content-wrapper -->
+      <!-- Modal content-->
+     <!-- <a href="#myModal"  data-toggle="modal" data-target="#myModal">Complaint Section</a></li>--
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="text-align:center;">Department</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+   -->
+<script src="resource/bootstrap.min.js"></script>
+  <script src="resource/simple-sidebar.js"></script>
+<script src="resource/modal.js">
+</script>
+</body>
+</html>

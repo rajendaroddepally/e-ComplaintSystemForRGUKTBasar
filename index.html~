@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>e-CS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="resource/bootstrap.min.css">
+  <script src="resource/bootstrap.min.js"></script>
+  <script src="resource/jquery.min.js"></script>
+  <style>
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+	li
+	{
+		height:50px;
+	}
+ body {
+      position: relative; 
+  }
+  .affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+  .navbar {
+      margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }
+    .row.content {height: 450px}
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+/
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse" style="background-color:rgb(0, 132, 191);height:65px" data-spy="affix" data-offset-top="60">
+  <div class="container-fluid">
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="hub.rgukt.ac.in" style="color:white;font-size:22px;">e-Complaint System</a>
+    </div>
+<div class="collapse navbar-collapse" id="myNavbar">
+    
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs" style="width:250px;height:1600px;">
+
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active">
+        <a href="#section1">Home</a></li>
+        <li><a href="#section2">Complaints</a></li>
+        <li><a href="#section3">Feedback</a></li>
+        <li><a href="#section3">Profile</a></li>
+      </ul><br>
+    </div>
+    <br>
+    
+    </div>
+  </div>
+ <div class="col-sm-9">
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h2>I Love Food</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
+      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
+      <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br><br>
+      
+      <h4><small>RECENT POSTS</small></h4>
+
+
+
+    
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+      <p><span class="badge">2</span> Comments:</p><br>
+      
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacked=h by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 11:05:00 GMT -->
+</html>
